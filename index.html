@@ -58,23 +58,23 @@
             <table align='center' border='3'>   
                 <tr>
                     <td width='340' height='20'>&nbsp;&nbsp;Plasman (fòma enprime ak elektwonik)</td>
-                    <td><input id='plasman' type='text' class='antre' maxlength='2' onchange='chajman3(this);'></td>
+                    <td><input id='plasman' type='number' class='antre' maxlength='2' onchange='chajman3(this);'></td>
                 </tr>
                 <tr>
                     <td>&nbsp;&nbsp;Videyo ou montre</td>
-                    <td><input id='videyo' type='text' class='antre' maxlength='2' onchange='chajman4(this);'></td>
+                    <td><input id='videyo' type='number' class='antre' maxlength='2' onchange='chajman4(this);'></td>
                 </tr>
                 <tr>
                     <td>&nbsp;&nbsp;Lè</td>
-                    <td><input id='le' type='text' class='antre' maxlength='2' onchange='chajman5(this);'></td>
+                    <td><input id='lè' type='number' class='antre' maxlength='2' onchange='chajman5(this);'></td>
                 </tr>
                 <tr>
                     <td>&nbsp;&nbsp;Nouvèl vizit</td>
-                    <td><input id='vizit' type='text' class='antre' maxlength='2' onchange='chajman6(this);'></td>
+                    <td><input id='vizit' type='number' class='antre' maxlength='2' onchange='chajman6(this);'></td>
                 </tr>
                 <tr>
                     <td>&nbsp;&nbsp;Kantite etid biblik <em>diferan</em> ou kondui</td>
-                    <td><input id='etid' type='text' class='antre' maxlength='2' onchange='chajman7(this);'></td>
+                    <td><input id='etid' type='number' class='antre' maxlength='2' onchange='chajman7(this);'></td>
                 </tr>
             </table>
             <br/>
@@ -94,39 +94,76 @@
         </form>
         <script>
             // DI SEKRETE KONGREGASYON AN BYENVENI
-            alert("Bonjou Fedeve Jean, Sa se Rapò Sevis pa m nan, gade l la tanpri.");
-
+           // alert("Bonjou Fedeve Jean, Sa se Rapò Sevis pa m nan, gade l la tanpri.");
+            
+            
+            
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE NON AN
             chajman = (antre) => localStorage.setItem('non', antre.value);
             document.getElementById('non').value = localStorage.getItem('non');
+            
+            var genNon = localStorage.getItem('non');
+            let antreNon = document.getElementById('non');
+            if(genNon === null) {antreNon.value = "𝕰𝖑𝖊𝖆𝖟𝖆𝖗 𝕲𝖆𝖗𝖈í𝖆 𝕽𝖔𝖉𝖗í𝖌𝖚𝖊𝖟";}
 
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE MWA A
             chajman2 = (antre) => localStorage.setItem('mwa', antre.value);
             document.getElementById('mwa').value = localStorage.getItem('mwa');
 
+            var genMwa = localStorage.getItem('mwa');
+            let antreMwa = document.getElementById('mwa');
+            if(genMwa === null) { antreMwa.value = "𝕆𝕜𝕥𝕠𝕓 𝟚𝟘𝟚𝟙" ; }
+
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE PLASMAN AN
             chajman3 = (antre) => localStorage.setItem('plasman', antre.value);
             document.getElementById('plasman').value = localStorage.getItem('plasman');
+
+            var genPlasman = localStorage.getItem('plasman');
+            let antrePlasman = document.getElementById('plasman');
+            if(genPlasman === null) { antrePlasman.value = "5"; }
 
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE VIDEYO A
             chajman4 = (antre) => localStorage.setItem('videyo', antre.value);
             document.getElementById('videyo').value = localStorage.getItem('videyo');
 
+            var genVideyo = localStorage.getItem('videyo');
+            let antreVideyo = document.getElementById('videyo');
+            if(genVideyo === null) { antreVideyo.value = "3"; } 
+
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE LE A
-            chajman5 = (antre) => localStorage.setItem('le', antre.value);
-            document.getElementById('le').value = localStorage.getItem('le');
+            chajman5 = (antre) => localStorage.setItem('lè', antre.value);
+            document.getElementById('lè').value = localStorage.getItem('lè');
+
+            var genLè = localStorage.getItem('lè');
+            let antreLè = document.getElementById('lè');
+            if(genLè === null) { antreLè.value = "15"; }
 
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE VIZIT LA
             chajman6 = (antre) => localStorage.setItem('vizit', antre.value);
             document.getElementById('vizit').value = localStorage.getItem('vizit');
 
+            var genVizit = localStorage.getItem('vizit');
+            let antreVizit = document.getElementById('vizit');
+            if(genVizit === null) { antreVizit.value = "20"; }
+
+
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE ETID LA
             chajman7 = (antre) => localStorage.setItem('etid', antre.value);
             document.getElementById('etid').value = localStorage.getItem('etid');
 
+            var genEtid = localStorage.getItem('etid');
+            let antreEtid = document.getElementById('etid');
+            if(genEtid === null) { antreEtid.value = "1";} 
+
+
             // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE KOMANTE A
             chajman8 = (antre) => localStorage.setItem('komante', antre.value);
             document.getElementById('komante').value = localStorage.getItem('komante');
+
+            var genKomante = localStorage.getItem('komante');
+            let antreKomante = document.getElementById('komante');
+            if(genKomante === null){antreKomante.value = "Kαɾҽɳƚҽɳ Cσʋιԃ-19 ԃҽρι 19 Mαʂ 2020";} 
+            
         </script>
     </body>
 </html>
