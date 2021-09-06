@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta lang='es'>
+        <title>Rapò sèvis 2021- 2022</title>
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+        <style>
+            body {
+                text-align: center;
+            }
+            table {
+                text-align: left; 
+            }
+           #non {
+                width: 350px;
+                border: none;
+                border-bottom:1px solid black;
+                color: blue;
+            }
+            #mwa {
+                width: 350px;
+                margin-right: 7px;
+                border: none;
+                border-bottom:1px solid black;
+                color: blue;
+                
+            }
+            .antre {
+                border: none;
+                outline: none;
+                width: 40px;
+                text-align: center;
+                color: blue;
+            }
+            #komante {
+                border: none;
+                outline: none;
+                text-align: center;
+                color: blue;
+                width: 100%;
+                resize: none;
+            }
+            #etiket {
+                padding: 0;
+                margin-left: 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3>RAPÒ SÈVIS</h3>
+        <form>
+            <label for='non'><strong>Non:</strong></label>
+            <input type='text' id='non' value="𝕰𝖑𝖊𝖆𝖟𝖆𝖗 𝕲𝖆𝖗𝖈í𝖆 𝕽𝖔𝖉𝖗í𝖌𝖚𝖊𝖟" maxlength='24' onchange='chajman(this);'><br/>
+            <label for='mwa'><b>Mwa:</b></label>
+            <input type='text' id='mwa' placeholder="ekri mwa ane" maxlength='15' onchange='chajman2(this);'><br/><br/>
+            <table align='center' border='3'>   
+                <tr>
+                    <td width='340' height='20'>&nbsp;&nbsp;Plasman (fòma enprime ak elektwonik)</td>
+                    <td><input id='plasman' type='text' class='antre' maxlength='2' onchange='chajman3(this);'></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;Videyo ou montre</td>
+                    <td><input id='videyo' type='text' class='antre' maxlength='2' onchange='chajman4(this);'></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;Lè</td>
+                    <td><input id='le' type='text' class='antre' maxlength='2' onchange='chajman5(this);'></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;Nouvèl vizit</td>
+                    <td><input id='vizit' type='text' class='antre' maxlength='2' onchange='chajman6(this);'></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;Kantite etid biblik <em>diferan</em> ou kondui</td>
+                    <td><input id='etid' type='text' class='antre' maxlength='2' onchange='chajman7(this);'></td>
+                </tr>
+            </table>
+            <br/>
+            <table border='3' align='center' width='400' height='65'>
+                <tr>
+                    <td>
+                        <label for='komante' id='etiket'>Komantè:</label>
+                        <textarea id='komante' maxlength='82' onchange='chajman8(this);'>Karenten Covid-19 depi 19 Mas 2020 </textarea></td>
+            </table>
+            <table align='center' width='400' height='65'>
+                <tr>
+                    <td>
+                        <font size='1'><b>S-4-CR      10/15</b></font>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            // DI SEKRETE KONGREGASYON AN BYENVENI
+            alert("Bonjou Fedeve Jean, Sa se Rapò Sevis pa m nan, gade l la tanpri.");
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE NON AN
+            chajman = (antre) => localStorage.setItem('non', antre.value);
+            document.getElementById('non').value = localStorage.getItem('non');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE MWA A
+            chajman2 = (antre) => localStorage.setItem('mwa', antre.value);
+            document.getElementById('mwa').value = localStorage.getItem('mwa');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE PLASMAN AN
+            chajman3 = (antre) => localStorage.setItem('plasman', antre.value);
+            document.getElementById('plasman').value = localStorage.getItem('plasman');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE VIDEYO A
+            chajman4 = (antre) => localStorage.setItem('videyo', antre.value);
+            document.getElementById('videyo').value = localStorage.getItem('videyo');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE LE A
+            chajman5 = (antre) => localStorage.setItem('le', antre.value);
+            document.getElementById('le').value = localStorage.getItem('le');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE VIZIT LA
+            chajman6 = (antre) => localStorage.setItem('vizit', antre.value);
+            document.getElementById('vizit').value = localStorage.getItem('vizit');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE ETID LA
+            chajman7 = (antre) => localStorage.setItem('etid', antre.value);
+            document.getElementById('etid').value = localStorage.getItem('etid');
+
+            // FIKSE VALE ANTRE YO NAN LOCALSTORAGE: ANTRE KOMANTE A
+            chajman8 = (antre) => localStorage.setItem('komante', antre.value);
+            document.getElementById('komante').value = localStorage.getItem('komante');
+        </script>
+    </body>
+</html>
